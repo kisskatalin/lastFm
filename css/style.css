@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+
+body {
+    font-family: 'Heebo', sans-serif;
+}
+
+.listening {
+    margin: 0 auto;
+    background-color: #f4f4f4;
+}
+
+.listening:hover {
+    background-color: #e9e9e9;
+    cursor: cell;
+}
+
+.currentlyListening, .notListening {
+    display: flex;
+}
+
+.currentlyListening_info, .notListening_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+.currentlyListening_info h1 {
+    font-size: 18px;
+    color: #ff934f;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.notListening_info h1 {
+    font-size: 18px;
+    color: #919191;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.currentlyListening .albumImage {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    padding: 6px;
+    animation: spin 3s linear infinite;
+    animation-play-state: running;
+}
+
+@-webkit-keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.notListening .albumImage {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    padding: 6px;
+}
+
+.currentlyListening .albumImage:hover {
+    animation-play-state: paused;
+}
+
+.currentlyListening_info .title {
+    font-weight: 300;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.notListening_info .title {
+    font-weight: 300;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+
+@media screen and (min-width: 60em) {
+    .currentlyListening_info .title {
+        font-size: 22px;
+    }
+
+    .notListening_info .title {
+        font-size: 22px;
+    }
+}
